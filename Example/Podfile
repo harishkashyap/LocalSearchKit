@@ -1,0 +1,10 @@
+target 'LocalSearchKit', :exclusive => true do
+  pod "LocalSearchKit", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "LocalSearchKit", :path => "../"
+
+  pod 'Kiwi/XCTest'
+  pod 'FBSnapshotTestCase'
+end
