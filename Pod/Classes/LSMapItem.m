@@ -15,7 +15,6 @@
 
     for (MKMapItem *mapItem in mapItems) {
         [_searchResults setObject:mapItem forKey:mapItem.name];
-        NSLog(@"%@", mapItem.name);
     }
     _boundingRegion = region;
     
@@ -30,7 +29,7 @@
 }
 
 - (NSString *)description {
-    NSMutableString *debugDescription = [[NSMutableString alloc] initWithString:@"Search results"];
+    NSMutableString *debugDescription = [[NSMutableString alloc] initWithString:@"Search results\n"];
     
     for (id key in [self.searchResults allKeys]) {
         [debugDescription appendString:@"\n"];

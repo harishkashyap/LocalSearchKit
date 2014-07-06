@@ -35,7 +35,7 @@ NSString * const kSearchCompleteNotification = @"kSearchCompleteNotification";
 
 - (void)enQueueMapItems:(MKLocalSearchResponse *)response forQuery:(NSString *)query {
     NSAssert(self.responseQueue != nil, @"LSDataManager needs to be allocated first!");
-    if (response.mapItems) {
+    if (response.mapItems.count) {
         LSMapItem *lsmapItem = [[LSMapItem alloc] initWithSearchResults:response.mapItems boundingRegion:response.boundingRegion];
         [self.responseQueue enqueue:lsmapItem];
     }
