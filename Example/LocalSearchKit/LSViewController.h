@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <LSKit.h>
 
-@interface LSViewController : UIViewController
+@interface LSViewController : UIViewController<LSManagerDelegate>
 
 @end
