@@ -11,6 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+LocalSearchKit requires DataStructures library. You can install DataStructures through cocoapods.
+
 ## Installation
 
 LocalSearchKit is available through [CocoaPods](http://cocoapods.org). To install
