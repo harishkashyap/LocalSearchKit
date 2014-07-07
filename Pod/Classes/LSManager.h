@@ -7,13 +7,14 @@
 //
 
 #import <MapKit/MapKit.h>
-#import "DataStructures.h"
+#import <DataStructures/DataStructures.h>
 
 @class LSOperation;
+@class LSMapItem;
 
 @protocol LSManagerDelegate <NSObject>
 
-- (void)searchResponse:(Queue *)responseQueue forQuery:(NSString *)query;
+- (void)searchResponse:(LSMapItem *)mapItem forQuery:(NSString *)query;
 
 @end
 

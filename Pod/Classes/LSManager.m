@@ -46,8 +46,11 @@
 }
 
 - (void)saveSearchResults:(NSNotification *)notification {
-    Queue *responseQueue = [[LSDataManager sharedInstance] responseQueue];
-    [self.delegate searchResponse:responseQueue forQuery:notification.object];
+    LSDataManager *dataManager = [LSDataManager sharedInstance];
+    LSMapItem *mapItem = dataManager.deQueueMapItem;
+    if (mapItem) {
+        [self.delegate searchResponse:mapItem forQuery:notification.object];
+    }
 }
 
 - (void)dealloc {

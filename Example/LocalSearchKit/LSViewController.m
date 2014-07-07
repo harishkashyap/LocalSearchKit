@@ -28,8 +28,8 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)searchResponse:(Queue *)responseQueue forQuery:(NSString *)query {
-    NSLog(@"%@ response for query %@", [responseQueue.dequeue description], query);
+- (void)searchResponse:(LSMapItem *)mapItem forQuery:(NSString *)query {
+    NSLog(@"%@ response for query %@", [mapItem description], query);
 }
 
 @end
