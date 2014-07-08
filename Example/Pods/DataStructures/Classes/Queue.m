@@ -48,7 +48,7 @@
         DoubleLinkedListNode *currentNode = (DoubleLinkedListNode *)self.head.next;
         
         newNode.object = object;
-
+        
         if (self.head.next == nil) {
             self.tail.next = newNode;
         }
@@ -71,6 +71,19 @@
         return object;
     }
     return nil;
+}
+
+- (NSString *)description {
+    NSMutableString *queueContent = [[NSMutableString alloc] initWithString:@"Contents of Queue\n"];
+    for (id object in [self allObjects]) {
+        if ([object respondsToSelector:@selector(description)]) {
+            [queueContent appendString:[object description]];
+            [queueContent appendString:@"\n"];
+        }else {
+            [queueContent appendString:@"Implement description method in the objects"];
+        }
+    }
+    return queueContent;
 }
 
 @end
