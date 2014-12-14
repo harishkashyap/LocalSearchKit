@@ -29,6 +29,7 @@
   NSString *referenceImagesDirectory__ = [NSString stringWithFormat:@"%s", FB_REFERENCE_IMAGE_DIR]; \
   BOOL comparisonSuccess__ = [self compareSnapshotOfView:(view__) referenceImagesDirectory:referenceImagesDirectory__ identifier:(identifier__) error:&error__]; \
   XCTAssertTrue(comparisonSuccess__, @"Snapshot comparison failed: %@", error__); \
+  XCTAssertFalse(self.recordMode, @"Test ran in record mode. Reference image is now saved. Disable record mode to perform an actual snapshot comparison!"); \
 }
 
 /**
@@ -42,6 +43,7 @@
   NSString *referenceImagesDirectory__ = [NSString stringWithFormat:@"%s", FB_REFERENCE_IMAGE_DIR]; \
   BOOL comparisonSuccess__ = [self compareSnapshotOfLayer:(layer__) referenceImagesDirectory:referenceImagesDirectory__ identifier:(identifier__) error:&error__]; \
   XCTAssertTrue(comparisonSuccess__, @"Snapshot comparison failed: %@", error__); \
+  XCTAssertFalse(self.recordMode, @"Test ran in record mode. Reference image is now saved. Disable record mode to perform an actual snapshot comparison!"); \
 }
 
 /**
@@ -57,6 +59,11 @@
  When YES, the test macros will save reference images, rather than performing an actual test.
  */
 @property (readwrite, nonatomic, assign) BOOL recordMode;
+
+/**
+ When YES, the test will render a view as layer.
+ **/
+@property (readwrite, nonatomic, assign) BOOL renderAsLayer;
 
 /**
  Performs the comparisong or records a snapshot of the layer if recordMode is YES.

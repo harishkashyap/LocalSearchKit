@@ -42,6 +42,16 @@
   self.snapshotController.recordMode = recordMode;
 }
 
+- (BOOL)renderAsLayer
+{
+    return self.snapshotController.renderAsLayer;
+}
+
+- (void)setRenderAsLayer:(BOOL)renderAsLayer
+{
+    self.snapshotController.renderAsLayer = renderAsLayer;
+}
+
 - (BOOL)compareSnapshotOfLayer:(CALayer *)layer
       referenceImagesDirectory:(NSString *)referenceImagesDirectory
                     identifier:(NSString *)identifier
@@ -74,7 +84,7 @@
 {
   _snapshotController.referenceImagesDirectory = referenceImagesDirectory;
   return [_snapshotController compareSnapshotOfViewOrLayer:viewOrLayer
-                                                  selector:self.selector
+                                                  selector:self.invocation.selector
                                                 identifier:identifier
                                                      error:errorPtr];
 }

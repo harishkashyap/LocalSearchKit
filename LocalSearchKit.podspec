@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "LocalSearchKit"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "Addition to MKLocalSearch to handle multiple search queries"
   s.description      = <<-DESC
                        MKLocalSearch is a local POI search feature released by Apple.
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Harish Krishnamurthy" => "hkashyap@icloud.com" }
-  s.source           = { :git => "https://github.com/harishkashyap/LocalSearchKit.git", :tag => "0.1.0" }
+  s.source           = { :git => "https://github.com/harishkashyap/LocalSearchKit.git", :tag => "0.1.1" }
   # s.social_media_url = 'https://twitter.com/hkashyap'
 
   s.platform     = :ios, '7.0'
@@ -24,5 +24,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'DataStructures', '> 0.1.1'
+  s.dependency 'DataStructures'
 end
