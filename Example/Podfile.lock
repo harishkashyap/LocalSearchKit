@@ -1,17 +1,13 @@
 PODS:
-  - DataStructures (0.1.5)
+  - DataStructures (0.1.3)
   - FBSnapshotTestCase (1.4)
-  - Kiwi/ARC (2.2.4)
-  - Kiwi/NonARC (2.2.4)
-  - Kiwi/XCTest (2.2.4):
-    - Kiwi/ARC
-    - Kiwi/NonARC
+  - Kiwi (2.3.1)
   - LocalSearchKit (0.1.1):
     - DataStructures
 
 DEPENDENCIES:
   - FBSnapshotTestCase
-  - Kiwi/XCTest
+  - Kiwi
   - LocalSearchKit (from `../`)
 
 EXTERNAL SOURCES:
@@ -19,9 +15,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  DataStructures: 114045d225b62f9bc5909398d64dee5c209c0103
+  DataStructures: 2e51f6f1613a98493d41a5adb4e215a841628855
   FBSnapshotTestCase: f9f225b5ba11c8d8c09075590490df16314e4d62
-  Kiwi: c73667f2b84cbf36f1a3830267c5a4ae8dcbd8ba
-  LocalSearchKit: 3d8453546c323f3008ad2a4708ca78098334da33
+  Kiwi: 73e1400209055ee9c8ba78c6012b6b642d0fb9f7
+  LocalSearchKit: bfc153ad03f4b40f17f4be965f9f138bd15cf2f7
 
 COCOAPODS: 0.35.0

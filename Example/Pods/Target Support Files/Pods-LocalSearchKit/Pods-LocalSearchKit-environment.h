@@ -10,7 +10,7 @@
 #define COCOAPODS_POD_AVAILABLE_DataStructures
 #define COCOAPODS_VERSION_MAJOR_DataStructures 0
 #define COCOAPODS_VERSION_MINOR_DataStructures 1
-#define COCOAPODS_VERSION_PATCH_DataStructures 5
+#define COCOAPODS_VERSION_PATCH_DataStructures 3
 
 // LocalSearchKit
 #define COCOAPODS_POD_AVAILABLE_LocalSearchKit

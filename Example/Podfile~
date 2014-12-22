@@ -1,5 +1,3 @@
-source 'git@github.com:CocoaPods/Specs.git'
-
 target 'LocalSearchKit', :exclusive => true do
   pod "LocalSearchKit", :path => "../"
 end
